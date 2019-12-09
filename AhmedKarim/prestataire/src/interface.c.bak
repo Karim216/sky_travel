@@ -587,14 +587,15 @@ create_windowPrestataire (void)
   GtkWidget *image14;
   GtkWidget *label112;
   GtkWidget *label60;
-  GtkWidget *label75;
-  GtkWidget *label77;
   GtkWidget *label74;
   GtkWidget *buttonModifierPerstVol;
   GtkWidget *alignment7;
   GtkWidget *hbox7;
   GtkWidget *image7;
   GtkWidget *label78;
+  GtkWidget *hbox33;
+  GtkWidget *label75;
+  GtkWidget *label77;
   GtkWidget *labelModifVol;
   GtkWidget *fixedSupprPrestVol;
   GtkWidget *entryIdSupprVol;
@@ -1353,16 +1354,6 @@ create_windowPrestataire (void)
   gtk_fixed_put (GTK_FIXED (fixed3), label60, 512, 0);
   gtk_widget_set_size_request (label60, 80, 25);
 
-  label75 = gtk_label_new (_("Premi\303\250re classe:"));
-  gtk_widget_show (label75);
-  gtk_fixed_put (GTK_FIXED (fixed3), label75, 288, 584);
-  gtk_widget_set_size_request (label75, 113, 25);
-
-  label77 = gtk_label_new (_("Economique:"));
-  gtk_widget_show (label77);
-  gtk_fixed_put (GTK_FIXED (fixed3), label77, 296, 632);
-  gtk_widget_set_size_request (label77, 104, 25);
-
   label74 = gtk_label_new (_("Prix voyage:"));
   gtk_widget_show (label74);
   gtk_fixed_put (GTK_FIXED (fixed3), label74, 440, 536);
@@ -1388,6 +1379,21 @@ create_windowPrestataire (void)
   label78 = gtk_label_new_with_mnemonic (_("modifier"));
   gtk_widget_show (label78);
   gtk_box_pack_start (GTK_BOX (hbox7), label78, FALSE, FALSE, 0);
+
+  hbox33 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_show (hbox33);
+  gtk_fixed_put (GTK_FIXED (fixed3), hbox33, 0, 0);
+  gtk_widget_set_size_request (hbox33, 295, 760);
+
+  label75 = gtk_label_new (_("Premi\303\250re classe:"));
+  gtk_widget_show (label75);
+  gtk_fixed_put (GTK_FIXED (fixed3), label75, 296, 584);
+  gtk_widget_set_size_request (label75, 113, 25);
+
+  label77 = gtk_label_new (_("Economique:"));
+  gtk_widget_show (label77);
+  gtk_fixed_put (GTK_FIXED (fixed3), label77, 304, 632);
+  gtk_widget_set_size_request (label77, 104, 25);
 
   labelModifVol = gtk_label_new (_("Modifier"));
   gtk_widget_show (labelModifVol);
@@ -2989,14 +2995,15 @@ create_windowPrestataire (void)
   GLADE_HOOKUP_OBJECT (windowPrestataire, image14, "image14");
   GLADE_HOOKUP_OBJECT (windowPrestataire, label112, "label112");
   GLADE_HOOKUP_OBJECT (windowPrestataire, label60, "label60");
-  GLADE_HOOKUP_OBJECT (windowPrestataire, label75, "label75");
-  GLADE_HOOKUP_OBJECT (windowPrestataire, label77, "label77");
   GLADE_HOOKUP_OBJECT (windowPrestataire, label74, "label74");
   GLADE_HOOKUP_OBJECT (windowPrestataire, buttonModifierPerstVol, "buttonModifierPerstVol");
   GLADE_HOOKUP_OBJECT (windowPrestataire, alignment7, "alignment7");
   GLADE_HOOKUP_OBJECT (windowPrestataire, hbox7, "hbox7");
   GLADE_HOOKUP_OBJECT (windowPrestataire, image7, "image7");
   GLADE_HOOKUP_OBJECT (windowPrestataire, label78, "label78");
+  GLADE_HOOKUP_OBJECT (windowPrestataire, hbox33, "hbox33");
+  GLADE_HOOKUP_OBJECT (windowPrestataire, label75, "label75");
+  GLADE_HOOKUP_OBJECT (windowPrestataire, label77, "label77");
   GLADE_HOOKUP_OBJECT (windowPrestataire, labelModifVol, "labelModifVol");
   GLADE_HOOKUP_OBJECT (windowPrestataire, fixedSupprPrestVol, "fixedSupprPrestVol");
   GLADE_HOOKUP_OBJECT (windowPrestataire, entryIdSupprVol, "entryIdSupprVol");
