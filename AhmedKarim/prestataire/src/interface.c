@@ -3306,25 +3306,27 @@ create_windowPrestEtOffre (void)
   GtkWidget *hbox8;
   GtkWidget *image8;
   GtkWidget *label79;
-  GtkWidget *label53;
   GtkWidget *vseparator1;
   GtkWidget *comboboxentry2;
-  GtkWidget *buttonPagePrestOffre;
-  GtkWidget *image44;
-  GtkWidget *label145;
-  GtkWidget *label146;
   GtkWidget *consulterPrestations;
   GtkWidget *alignment31;
   GtkWidget *hbox31;
   GtkWidget *image43;
   GtkWidget *label220;
-  GtkWidget *label198;
+  GtkWidget *hbox34;
+  GtkWidget *image46;
   GtkWidget *label199;
   GtkWidget *label200;
   GtkWidget *label201;
-  GtkWidget *label203;
-  GtkWidget *label204;
   GtkWidget *label202;
+  GtkWidget *label203;
+  GtkWidget *buttonPagePrestOffre;
+  GtkWidget *image44;
+  GtkWidget *label146;
+  GtkWidget *label145;
+  GtkWidget *label53;
+  GtkWidget *label198;
+  GtkWidget *label204;
   GtkWidget *labelAffPrest;
 
   windowPrestEtOffre = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -3373,13 +3375,6 @@ create_windowPrestEtOffre (void)
   gtk_box_pack_start (GTK_BOX (hbox8), label79, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label79), TRUE);
 
-  label53 = gtk_label_new (_("<span foreground=\"#FF3333\" font_family=\"monospace\">B\303\251n\303\251fi\303\247iez de notre surprise en\ncliquant sur une date de la calendrier</span>"));
-  gtk_widget_show (label53);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label53, 456, 32);
-  gtk_widget_set_size_request (label53, 352, 48);
-  gtk_label_set_use_markup (GTK_LABEL (label53), TRUE);
-  gtk_label_set_justify (GTK_LABEL (label53), GTK_JUSTIFY_CENTER);
-
   vseparator1 = gtk_vseparator_new ();
   gtk_widget_show (vseparator1);
   gtk_fixed_put (GTK_FIXED (fixedAffPrest), vseparator1, 368, 288);
@@ -3394,27 +3389,6 @@ create_windowPrestEtOffre (void)
   gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxentry2), _("Location_voiture"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxentry2), _("Offres"));
   gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxentry2), "");
-
-  buttonPagePrestOffre = gtk_button_new ();
-  gtk_widget_show (buttonPagePrestOffre);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), buttonPagePrestOffre, 168, 66);
-  gtk_widget_set_size_request (buttonPagePrestOffre, 104, 32);
-
-  image44 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image44);
-  gtk_container_add (GTK_CONTAINER (buttonPagePrestOffre), image44);
-
-  label145 = gtk_label_new (_("<span foreground=\"#222\" font_family=\"monospace\">Nos offres:</span>"));
-  gtk_widget_show (label145);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label145, 38, 69);
-  gtk_widget_set_size_request (label145, 105, 25);
-  gtk_label_set_use_markup (GTK_LABEL (label145), TRUE);
-
-  label146 = gtk_label_new (_("<span foreground=\"#222\" font_family=\"monospace\">consulter notre catalogue pour plus de pr\303\251cision:</span>"));
-  gtk_widget_show (label146);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label146, 376, 708);
-  gtk_widget_set_size_request (label146, 440, 30);
-  gtk_label_set_use_markup (GTK_LABEL (label146), TRUE);
 
   consulterPrestations = gtk_button_new ();
   gtk_widget_show (consulterPrestations);
@@ -3438,47 +3412,85 @@ create_windowPrestEtOffre (void)
   gtk_box_pack_start (GTK_BOX (hbox31), label220, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label220), TRUE);
 
-  label198 = gtk_label_new (_("label198"));
-  gtk_widget_show (label198);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label198, 440, 312);
-  gtk_widget_set_size_request (label198, 480, 24);
-  gtk_label_set_justify (GTK_LABEL (label198), GTK_JUSTIFY_CENTER);
+  hbox34 = gtk_hbox_new (FALSE, 0);
+  gtk_widget_show (hbox34);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), hbox34, 383, 0);
+  gtk_widget_set_size_request (hbox34, 396, 149);
+
+  image46 = create_pixmap (windowPrestEtOffre, "skytravel-logo.png");
+  gtk_widget_show (image46);
+  gtk_box_pack_start (GTK_BOX (hbox34), image46, TRUE, TRUE, 3);
+  gtk_widget_set_size_request (image46, 250, 150);
 
   label199 = gtk_label_new (_("label199"));
   gtk_widget_show (label199);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label199, 456, 416);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label199, 416, 416);
   gtk_widget_set_size_request (label199, 472, 24);
   gtk_label_set_justify (GTK_LABEL (label199), GTK_JUSTIFY_CENTER);
 
   label200 = gtk_label_new (_("label200"));
   gtk_widget_show (label200);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label200, 448, 448);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label200, 408, 448);
   gtk_widget_set_size_request (label200, 488, 24);
   gtk_label_set_justify (GTK_LABEL (label200), GTK_JUSTIFY_CENTER);
 
   label201 = gtk_label_new (_("label201"));
   gtk_widget_show (label201);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label201, 448, 480);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label201, 408, 480);
   gtk_widget_set_size_request (label201, 496, 24);
   gtk_label_set_justify (GTK_LABEL (label201), GTK_JUSTIFY_CENTER);
 
+  label202 = gtk_label_new (_("label202"));
+  gtk_widget_show (label202);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label202, 400, 512);
+  gtk_widget_set_size_request (label202, 504, 24);
+  gtk_label_set_justify (GTK_LABEL (label202), GTK_JUSTIFY_CENTER);
+
   label203 = gtk_label_new (_("label203"));
   gtk_widget_show (label203);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label203, 440, 544);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label203, 400, 544);
   gtk_widget_set_size_request (label203, 512, 24);
   gtk_label_set_justify (GTK_LABEL (label203), GTK_JUSTIFY_CENTER);
 
+  buttonPagePrestOffre = gtk_button_new ();
+  gtk_widget_show (buttonPagePrestOffre);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), buttonPagePrestOffre, 168, 88);
+  gtk_widget_set_size_request (buttonPagePrestOffre, 104, 32);
+
+  image44 = gtk_image_new_from_stock ("gtk-refresh", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image44);
+  gtk_container_add (GTK_CONTAINER (buttonPagePrestOffre), image44);
+
+  label146 = gtk_label_new (_("<span foreground=\"#222\" font_family=\"monospace\">consulter notre catalogue pour plus de pr\303\251cision:</span>"));
+  gtk_widget_show (label146);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label146, 376, 712);
+  gtk_widget_set_size_request (label146, 440, 30);
+  gtk_label_set_use_markup (GTK_LABEL (label146), TRUE);
+
+  label145 = gtk_label_new (_("<span foreground=\"#222\" font_family=\"monospace\">Nos offres:</span>"));
+  gtk_widget_show (label145);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label145, 49, 94);
+  gtk_widget_set_size_request (label145, 105, 25);
+  gtk_label_set_use_markup (GTK_LABEL (label145), TRUE);
+
+  label53 = gtk_label_new (_("<span foreground=\"#FF3333\" font_family=\"monospace\">B\303\251n\303\251fi\303\247iez de notre surprise en\ncliquant sur une date de la calendrier</span>"));
+  gtk_widget_show (label53);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label53, 408, 176);
+  gtk_widget_set_size_request (label53, 352, 48);
+  gtk_label_set_use_markup (GTK_LABEL (label53), TRUE);
+  gtk_label_set_justify (GTK_LABEL (label53), GTK_JUSTIFY_CENTER);
+
+  label198 = gtk_label_new (_("label198"));
+  gtk_widget_show (label198);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label198, 400, 328);
+  gtk_widget_set_size_request (label198, 480, 24);
+  gtk_label_set_justify (GTK_LABEL (label198), GTK_JUSTIFY_CENTER);
+
   label204 = gtk_label_new (_("label204"));
   gtk_widget_show (label204);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label204, 448, 576);
+  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label204, 408, 576);
   gtk_widget_set_size_request (label204, 504, 24);
   gtk_label_set_justify (GTK_LABEL (label204), GTK_JUSTIFY_CENTER);
-
-  label202 = gtk_label_new (_("label202"));
-  gtk_widget_show (label202);
-  gtk_fixed_put (GTK_FIXED (fixedAffPrest), label202, 448, 512);
-  gtk_widget_set_size_request (label202, 504, 24);
-  gtk_label_set_justify (GTK_LABEL (label202), GTK_JUSTIFY_CENTER);
 
   labelAffPrest = gtk_label_new (_("Accueil"));
   gtk_widget_show (labelAffPrest);
@@ -3490,11 +3502,11 @@ create_windowPrestEtOffre (void)
   g_signal_connect ((gpointer) buttonRetourPrestEtOffre, "clicked",
                     G_CALLBACK (on_buttonRetourPrestEtOffre_clicked),
                     NULL);
-  g_signal_connect ((gpointer) buttonPagePrestOffre, "clicked",
-                    G_CALLBACK (on_buttonPagePrestOffre_clicked),
-                    NULL);
   g_signal_connect ((gpointer) consulterPrestations, "clicked",
                     G_CALLBACK (on_consulterPrestations_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttonPagePrestOffre, "clicked",
+                    G_CALLBACK (on_buttonPagePrestOffre_clicked),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -3508,25 +3520,27 @@ create_windowPrestEtOffre (void)
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, hbox8, "hbox8");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, image8, "image8");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label79, "label79");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label53, "label53");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, vseparator1, "vseparator1");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, comboboxentry2, "comboboxentry2");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, buttonPagePrestOffre, "buttonPagePrestOffre");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, image44, "image44");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label145, "label145");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label146, "label146");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, consulterPrestations, "consulterPrestations");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, alignment31, "alignment31");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, hbox31, "hbox31");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, image43, "image43");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label220, "label220");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label198, "label198");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, hbox34, "hbox34");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, image46, "image46");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label199, "label199");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label200, "label200");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label201, "label201");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label203, "label203");
-  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label204, "label204");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label202, "label202");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label203, "label203");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, buttonPagePrestOffre, "buttonPagePrestOffre");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, image44, "image44");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label146, "label146");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label145, "label145");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label53, "label53");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label198, "label198");
+  GLADE_HOOKUP_OBJECT (windowPrestEtOffre, label204, "label204");
   GLADE_HOOKUP_OBJECT (windowPrestEtOffre, labelAffPrest, "labelAffPrest");
 
   return windowPrestEtOffre;

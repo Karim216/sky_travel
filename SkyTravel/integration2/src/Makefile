@@ -104,7 +104,8 @@ am_prestataire_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
 	verifAuthentif.$(OBJEXT) ajouter_prest_vol.$(OBJEXT) \
 	afficherPrest.$(OBJEXT) supprPrest.$(OBJEXT) \
 	modifier_prest_vol.$(OBJEXT) affichageHbr.$(OBJEXT) \
-	affichageVoiture.$(OBJEXT) afficherOffres.$(OBJEXT)
+	affichageVoiture.$(OBJEXT) afficherOffres.$(OBJEXT) \
+	agent.$(OBJEXT) facture.$(OBJEXT) payement.$(OBJEXT)
 prestataire_OBJECTS = $(am_prestataire_OBJECTS)
 am__DEPENDENCIES_1 =
 prestataire_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -164,12 +165,12 @@ ETAGS = etags
 CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/karim/Bureau/integration1/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/missing autoconf
-AUTOHEADER = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/missing autoheader
-AUTOMAKE = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/missing automake-1.15
+AUTOCONF = ${SHELL} /home/karim/Bureau/integration1/missing autoconf
+AUTOHEADER = ${SHELL} /home/karim/Bureau/integration1/missing autoheader
+AUTOMAKE = ${SHELL} /home/karim/Bureau/integration1/missing automake-1.15
 AWK = mawk
 CATALOGS = 
 CATOBJEXT = .gmo
@@ -204,7 +205,7 @@ LIBOBJS =
 LIBS = 
 LTLIBOBJS = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/missing makeinfo
+MAKEINFO = ${SHELL} /home/karim/Bureau/integration1/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -233,10 +234,10 @@ STRIP =
 USE_NLS = yes
 VERSION = 0.1
 XGETTEXT = /usr/bin/xgettext
-abs_builddir = /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/src
-abs_srcdir = /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/src
-abs_top_builddir = /home/karim/Bureau/sky_travel/AhmedKarim/prestataire
-abs_top_srcdir = /home/karim/Bureau/sky_travel/AhmedKarim/prestataire
+abs_builddir = /home/karim/Bureau/integration1/src
+abs_srcdir = /home/karim/Bureau/integration1/src
+abs_top_builddir = /home/karim/Bureau/integration1
+abs_top_srcdir = /home/karim/Bureau/integration1
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -255,7 +256,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/karim/Bureau/sky_travel/AhmedKarim/prestataire/install-sh
+install_sh = ${SHELL} /home/karim/Bureau/integration1/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -293,7 +294,10 @@ prestataire_SOURCES = \
 	modifier_prest_vol.c modifier_prest_vol.h \
 	affichageHbr.c affichageHbr.h \
 	affichageVoiture.c affichageVoiture.h \
-	afficherOffres.c afficherOffres.h
+	afficherOffres.c afficherOffres.h \
+	agent.c agent.h \
+	facture.c facture.h \
+	payement.c payement.h
 
 prestataire_LDADD = -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype $(INTLLIBS)
 all: all-am
@@ -386,11 +390,14 @@ include ./$(DEPDIR)/affichageHbr.Po
 include ./$(DEPDIR)/affichageVoiture.Po
 include ./$(DEPDIR)/afficherOffres.Po
 include ./$(DEPDIR)/afficherPrest.Po
+include ./$(DEPDIR)/agent.Po
 include ./$(DEPDIR)/ajouter_prest_vol.Po
 include ./$(DEPDIR)/callbacks.Po
+include ./$(DEPDIR)/facture.Po
 include ./$(DEPDIR)/interface.Po
 include ./$(DEPDIR)/main.Po
 include ./$(DEPDIR)/modifier_prest_vol.Po
+include ./$(DEPDIR)/payement.Po
 include ./$(DEPDIR)/support.Po
 include ./$(DEPDIR)/supprPrest.Po
 include ./$(DEPDIR)/verifAuthentif.Po
