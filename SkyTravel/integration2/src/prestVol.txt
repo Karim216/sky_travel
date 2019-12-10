@@ -1,3 +1,0 @@
-200 tunisair boeing Première&Economiques douala 1/1/2019 1H1Mn yaoundé 1/1/2019 1H1Mn 4500 2000
-7500 Tunisair Boeing_850 Toutes Tnis 20/12/2019 12H15Mn Turkish 20/12/2019 14H30Mn 1500_dt 750_dt
-800 Camerco Cargo_450 Economiques Kribi 20/2/2020 14H30Mn Bouda 20/2/2020 15H45Mn 150000 50000
