@@ -1,0 +1,6 @@
+145 prado Toyota 1800_km 25_Km_Heure Disponible bien_propre 250_dt/jour
+0215 avensis Toyota 78214_km 400_Km_Heure Disponible propre 90_dt/jour
+00124 alex Toyota 7800_km 25_Km_Heure Disponible ras 75_dt/jour
+001 poisson Mercedes 458700_km 400_Km_Heure Disponible ras 148_dt/jour
+0000 davidson Toyota 4587100_km 25_Km_Heure Disponible bien_propre 100_dt/jour
+0022 nissan Toyota 10014540_km 400_Km_Heure Non_Disponible RAS 150_dt/jour

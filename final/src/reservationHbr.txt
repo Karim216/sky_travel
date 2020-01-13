@@ -1,0 +1,4 @@
+1045 687 paris hotels_4_etoiles 1_Bebe(s)/1_enfant(s)/1_adulte(s) 20/2/2020
+201 458 paris hotels_5_etoiles 0_Bebe(s)/1_enfant(s)/2_adulte(s) 24/2/2020
+2222 1111 foumban  hotels_3_etoiles 2_Bebe(s)/2_enfant(s)/1_adulte(s) 31/12/2020
+058 023 paris hotels_4_etoiles 0_Bebe(s)/1_enfant(s)/1_adulte(s) 31/12/2020
